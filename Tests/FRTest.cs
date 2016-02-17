@@ -18,6 +18,5 @@ namespace  FinderReplacer
       string newFindReplace = FindReplace.FindAndReplace("I am walking my cat to the cathedral","cat","dog");
       Assert.Equal("I am walking my dog to the doghedral", newFindReplace);
     }
-
   }
 }
