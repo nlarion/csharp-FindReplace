@@ -10,32 +10,13 @@ namespace FinderReplacer
 //
   public class FindReplace
   {
-    private string _sentence;
-    private string _wordChoice;
-    private string _replaceChoice;
+
 
 //construtor//
-    public FindReplace (string sentence, string wordChoice, string replaceChoice)
+    public static string FindAndReplace (string sentence, string wordChoice, string replaceChoice)
     {
-      _sentence = sentence;
-      _wordChoice = wordChoice;
-      _replaceChoice = replaceChoice;
-    }
-    public string GetSentence()
-    {
-      return _sentence;
-    }
-    public string GetWordChoice()
-    {
-      return _wordChoice;
-    }
-    public string GetReplaceChoice()
-    {
-      return _replaceChoice;
-    }
-    public string ReturnString()
-    {
-      return "Hello universe";
+
+      return sentence.Replace(wordChoice, replaceChoice);
     }
   }
 }

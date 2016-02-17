@@ -9,8 +9,14 @@ namespace  FinderReplacer
     [Fact]
     public void ReturnUniverseForWorld()
     {
-      FindReplace newFindReplace = new FindReplace("Hello World","world","universe");
-      Assert.Equal("Hello universe", newFindReplace.ReturnString());
+      string newFindReplace = FindReplace.FindAndReplace("Hello World","World","universe");
+      Assert.Equal("Hello universe", newFindReplace);
+    }
+    [Fact]
+    public void ReturnUniverseForLowerCaseWorld()
+    {
+      string newFindReplace = FindReplace.FindAndReplace("Hello World","world","universe");
+      Assert.Equal("Hello universe", newFindReplace);
     }
   }
 }
