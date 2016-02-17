@@ -9,14 +9,15 @@ namespace  FinderReplacer
     [Fact]
     public void ReturnUniverseForWorld()
     {
-      string newFindReplace = FindReplace.FindAndReplace("Hello World","World","universe");
+      string newFindReplace = FindReplace.FindAndReplace("Hello World","world","universe");
       Assert.Equal("Hello universe", newFindReplace);
     }
     [Fact]
     public void ReturnUniverseForLowerCaseWorld()
     {
-      string newFindReplace = FindReplace.FindAndReplace("Hello World","world","universe");
-      Assert.Equal("Hello universe", newFindReplace);
+      string newFindReplace = FindReplace.FindAndReplace("I am walking my cat to the cathedral","cat","dog");
+      Assert.Equal("I am walking my dog to the doghedral", newFindReplace);
     }
+
   }
 }

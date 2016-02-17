@@ -1,22 +1,17 @@
 using System;
-// using System.Linq;
+using System.Linq;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
 namespace FinderReplacer
-
 {
-
-//   //variables//
-//
   public class FindReplace
   {
-
-
-//construtor//
     public static string FindAndReplace (string sentence, string wordChoice, string replaceChoice)
     {
-
-      return sentence.Replace(wordChoice, replaceChoice);
+      string pattern = "(?i)"+wordChoice;
+      Regex regex = new Regex(pattern);
+      return regex.Replace(sentence, replaceChoice);
     }
   }
 }
